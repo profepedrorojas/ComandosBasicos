@@ -1,0 +1,12 @@
+! Establecer hostname y banner
+hostname R1
+banner motd #Acceso restringido por Profe Pedro#
+
+! Configurar contraseñas (consola y modo enable)
+line console 0
+ password ulagos
+ login
+ exit
+
+enable secret 2025          ! Contraseña encriptada para modo privilegiado
+service password-encryption ! Encripta contraseñas en texto claro
